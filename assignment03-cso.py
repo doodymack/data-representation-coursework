@@ -6,11 +6,11 @@ import requests
 import json
 
 # when inspect the URL each dataset is listed in dataset url i.e.
-# https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/FP001/JSON-stat/2.0/en"
+# https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/FIQ02/JSON-stat/2.0/en"
 # Therefore if split the url into urlBegining + dataset + urlEnd can then
 # allow the url in request be modified for each requested dataset
-# i.e. dataset here 'FP001' becomes a var 'dataset' that can be called for in the script when executed
-# e.g. getFormattedAsFile("FP001") where 'FP001' becomes 'dataset' when main script is run
+# i.e. dataset here 'FIQ02' becomes a var 'dataset' that can be called for in the script when executed
+# e.g. getFormattedAsFile("FIQ02") where 'FIQ02' becomes 'dataset' when main script is run
 
 urlBegining = "https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/"
 urlEnd = "/JSON-stat/2.0/en"
@@ -29,4 +29,4 @@ def getAllAsFile(dataset):
 
 if __name__ == "__main__":
     getAllAsFile("FIQ02")
-    #getFormattedAsFile("FP001")
+    #getFormattedAsFile("FIQ02")
